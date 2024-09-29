@@ -12,7 +12,7 @@ function Navbar({ children }) {
         <div className="navbar">
             <header className="navbar-header">
                 <div className="navbar-logo">
-                    <img src={logo} alt="Logo" width="170px" height="130px" loading='lazy' />
+                    <img src={logo} alt="Logo" width="170" height="130" loading='lazy' />
                 </div>
                 <nav className="navbar-links">
                     <select className="language-selector">
@@ -20,11 +20,17 @@ function Navbar({ children }) {
                         <option>Hindi</option>
                     </select>
                     {!isLoginPage && (
-                        <NavLink to="/login" className="signin-button">
-                            Sign In
-                        </NavLink>
+                        location.pathname !== `/player/${location.pathname.split('/').pop()}` ? (
+                            <NavLink to="/login" className="signin-button">
+                                Sign In
+                            </NavLink>
+                        ) : (
+                            <div className='movie_list'>
+                                <Link to="/card" className='signin-button'>Movie List</Link>
+                                <div>Username</div>
+                            </div>
+                        )
                     )}
-                    
                 </nav>
             </header>
             <div className="navbar-children">

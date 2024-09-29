@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import './Login.css'; // Import your CSS file
 import Navbar from "./Navbar";
 import { useState } from "react";
@@ -10,7 +10,8 @@ function Login() {
     });
 
     const navigate = useNavigate(); // Use useNavigate for navigation
-    const location = useLocation();
+    
+    
 
     const submitHandler = (e) => {
         e.preventDefault();

@@ -9,6 +9,7 @@
     padding: 10px 20px; /* Padding around the navbar */
 }
 
+
 .navbar-header {
     display: flex;
     justify-content: space-between;
@@ -17,6 +18,36 @@
 
 .navbar-logo img {
     height: 50px; /* Logo size */
+}
+.movie_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between button and username */
+    padding: 20px; /* Add some padding */
+    background-color: #141414; /* Dark background like Netflix */
+    color: white; /* White text color */
+}
+
+.button_back {
+    display: inline-block;
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #e50914; /* Netflix red color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Slightly rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.button_back:hover {
+    background-color: #f40612; /* Darker red on hover */
+}
+
+.username {
+    font-size: 1rem; /* Font size for username */
+    margin-left: 20px; /* Space between button and username */
+    font-weight: 500; /* Semi-bold */
 }
 
 .navbar-links {
@@ -67,4 +98,8 @@
         margin-top: 10px; /* Space between logo and links */
     }
 }
+
+
+
+
 

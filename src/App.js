@@ -7,6 +7,7 @@ import Login from './component/Login';
 import Signup from './component/Signup';
 import Card from './component/Card';
 import ShowMovieCard from './component/ShowMovieCard';
+import Player from './pages/Player';
 function App() {
   return (
     // <div className="App">
@@ -22,6 +23,7 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<BestHeader />}/>
       <Route path='/card' element={<ShowMovieCard />} />
+      <Route path='/player/:id' element={<Player />} />
     </Routes>
 
 

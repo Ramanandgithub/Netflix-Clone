@@ -1,0 +1,38 @@
+.card-container {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    width: 100%; /* Full width */
+    padding: 20px 0; /* Vertical padding */
+    position: relative; /* For absolute positioning of the auto-scroll effect */
+}
+
+.card {
+    min-width: 200px; /* Minimum width for each card */
+    margin: 0 10px; /* Spacing between cards */
+    border: 1px solid #ccc; /* Border for each card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.2s; /* Smooth scaling effect */
+    gap: 30px;
+    margin: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+.image_card {
+    width: 100%; /* Image takes full width of card */
+    border-top-left-radius: 8px; /* Rounded corners for the top */
+    border-top-right-radius: 8px; /* Rounded corners for the top */
+}
+
+.original_title {
+    font-size: 1.2em; /* Title font size */
+    margin: 10px 0; /* Margin for title */
+}
+
+.wrapper {
+    padding: 10px; /* Padding inside card */
+}

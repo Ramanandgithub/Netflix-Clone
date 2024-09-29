@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.trailer-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #d316e1de;
+}
+
+.trailer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.trailer-video {
+    width: 100%;
+    max-width: 800px; /* Max width for larger screens */
+    height: 450px; /* Adjust height for responsiveness */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.trailer-type {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .trailer-heading {
+        font-size: 2rem;
+    }
+
+    .trailer-video {
+        height: 300px; /* Smaller height for mobile */
+    }
+
+    .trailer-type {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trailer-heading {
+        font-size: 1.5rem;
+    }
+
+    .trailer-video {
+        height: 200px; /* Even smaller height for very small screens */
+    }
+
+    .trailer-type {
+        font-size: 0.9rem;
+    }
+}
