@@ -1,0 +1,70 @@
+
+
+.navbar {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url("../images/banner.jpeg") ,rgba(0, 0, 0, .7);
+    background-blend-mode: darken;
+     /* Dark background */
+    padding: 10px 20px; /* Padding around the navbar */
+}
+
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-logo img {
+    height: 50px; /* Logo size */
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.language-selector {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px; /* Space between links */
+    transition: color 0.3s ease;
+}
+
+.signin-button {
+    background-color: #e50914; /* Netflix red */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.signin-button:hover {
+    background-color: #f40612; /* Darker red on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .navbar-header {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: flex-start;
+    }
+    .navbar-links {
+        margin-top: 10px; /* Space between logo and links */
+    }
+}
+

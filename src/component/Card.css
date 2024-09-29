@@ -1,0 +1,59 @@
+/* Card.css */
+
+body {
+    background-color: #121212; /* Dark background for the entire app */
+    color: #ffffff; /* Light text color */
+    font-family: 'Arial', sans-serif; /* Change the font for a cleaner look */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center the cards */
+    padding: 20px;
+    overflow-y: auto; /* Add vertical scroll if needed */
+}
+
+.card {
+    background-color: #1e1e1e; /* Dark card background */
+    border-radius: 10px; /* Rounded corners */
+    margin: 15px; /* Spacing between cards */
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.2s; /* Smooth scaling effect */
+    width: 200px; /* Fixed width for cards */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.wrapper {
+    padding: 10px; /* Padding inside the card */
+}
+
+.image_card {
+    border-radius: 8px; /* Rounded corners for images */
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.original_title {
+    font-size: 18px; /* Larger font size for title */
+    font-weight: bold; /* Bold title */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+span {
+    display: block; /* Display block for better alignment */
+    margin: 5px 0; /* Margin for spacing */
+}
+
+span:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+p {
+    font-size: 14px; /* Smaller font size for description */
+    color: #b0b0b0; /* Lighter color for description */
+}
