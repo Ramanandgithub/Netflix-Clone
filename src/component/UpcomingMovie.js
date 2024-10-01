@@ -5,6 +5,7 @@
 import { useEffect, useState } from "react";
 import './UpcomingMovie.css'; // Ensure to import your CSS file
 import { ThreeCircles } from 'react-loader-spinner';
+import { Link } from "react-router-dom";
 
 function UpcomingMovie() {
     const [data, setData] = useState([]);
@@ -40,7 +41,7 @@ function UpcomingMovie() {
     return (
         <div>
             <div><h1>Upcoming Movies</h1></div>
-            <div className="card-container">
+            <div  className="card-container">
                 {loading ? (
                     <ThreeCircles
                         visible={true}
@@ -52,7 +53,7 @@ function UpcomingMovie() {
                 ) : (
                     data.map((value, index) => (
                         <div key={index} className="card">
-                            <div className="wrapper">
+                            <Link to = {`/upcoming/${value.id}`} className="wrapper">
                                 <img
                                     className="image_card"
                                     src={`https://image.tmdb.org/t/p/w500${value.poster_path}`}
@@ -61,7 +62,7 @@ function UpcomingMovie() {
                                 />
                                 <h3 className="original_title">{value.original_title}</h3>
                                 <span>Release Date - {value.release_date}</span>
-                            </div>
+                            </Link>
                         </div>
                     ))
                 )}

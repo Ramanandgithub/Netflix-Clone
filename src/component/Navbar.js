@@ -7,6 +7,7 @@ function Navbar({ children }) {
 
     // Check if we are on the login page
     const isLoginPage = location.pathname === '/login';
+    
 
     return (
         <div className="navbar">
@@ -19,6 +20,7 @@ function Navbar({ children }) {
                         <option>English</option>
                         <option>Hindi</option>
                     </select>
+                    
                     {!isLoginPage && (
                         location.pathname !== `/player/${location.pathname.split('/').pop()}` ? (
                             <NavLink to="/login" className="signin-button">

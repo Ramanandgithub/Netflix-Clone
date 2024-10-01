@@ -1,27 +1,30 @@
-/* Card.css */
-
 body {
-    background-color: #121212; /* Dark background for the entire app */
-    color: #ffffff; /* Light text color */
-    font-family: 'Arial', sans-serif; /* Change the font for a cleaner look */
+    background-color: #141414; /* Dark background for the entire body */
+    color: white; /* Default text color */
+    font-family: Arial, sans-serif; /* Font family */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add some padding */
+}
+
+h1 {
+    text-align: center; /* Center the heading */
+    font-size: 2.5rem; /* Font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
 }
 
 .card-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
-    justify-content: center; /* Center the cards */
-    padding: 20px;
-    overflow-y: auto; /* Add vertical scroll if needed */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center; /* Center the items */
+     /* Space between cards */
 }
 
 .card {
-    background-color: #1e1e1e; /* Dark card background */
-    border-radius: 10px; /* Rounded corners */
-    margin: 15px; /* Spacing between cards */
-    overflow: hidden; /* Prevent overflow */
-    transition: transform 0.2s; /* Smooth scaling effect */
-    width: 200px; /* Fixed width for cards */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    background-color: #222; /* Card background color */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    width: 200px; /* Fixed width for the card */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .card:hover {
@@ -29,31 +32,42 @@ body {
 }
 
 .wrapper {
-    padding: 10px; /* Padding inside the card */
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* White text color */
 }
 
 .image_card {
-    border-radius: 8px; /* Rounded corners for images */
-    width: 100%; /* Full width of the card */
+    width: 100%; /* Responsive width */
     height: auto; /* Maintain aspect ratio */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
 }
 
 .original_title {
-    font-size: 18px; /* Larger font size for title */
-    font-weight: bold; /* Bold title */
-    margin: 10px 0; /* Margin for spacing */
+    padding: 10px; /* Padding for the title */
+    font-size: 1.1rem; /* Font size for the movie title */
+    text-align: center; /* Center the title */
+    margin: 0; /* Remove default margin */
 }
 
-span {
-    display: block; /* Display block for better alignment */
-    margin: 5px 0; /* Margin for spacing */
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .card {
+        width: 150px; /* Smaller card width for tablets */
+    }
 }
 
-span:hover {
-    text-decoration: underline; /* Underline on hover for better UX */
-}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Further adjust heading size for mobile */
+    }
 
-p {
-    font-size: 14px; /* Smaller font size for description */
-    color: #b0b0b0; /* Lighter color for description */
+    .card {
+        width: 120px; /* Smaller card width for mobile */
+    }
 }

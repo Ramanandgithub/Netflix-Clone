@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react";
 import './Card.css'; // Ensure to import your CSS file
+import { Link } from "react-router-dom";
 
 import { ThreeCircles } from 'react-loader-spinner'
 
@@ -58,7 +59,7 @@ function TopRated() {
                 ) : (
                     data.map((value, index) => (
                         <div key={index} className="card">
-                            <div className="wrapper">
+                            <Link to={`/toprated/${value.id}`} className="wrapper">
                                 <img
                                     className="image_card"
                                     src={`https://image.tmdb.org/t/p/w500${value.poster_path}`}
@@ -79,7 +80,7 @@ function TopRated() {
                                 </span>
 
                                 <p>Rating: <strong>{value.vote_average}</strong></p>
-                            </div>
+                            </Link>
                         </div>
                     ))
                 )}
