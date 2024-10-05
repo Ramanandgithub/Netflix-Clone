@@ -87,6 +87,33 @@
 .signin-button:hover {
     background-color: #f40612; /* Darker red on hover */
 }
+.signin-button:hover {
+    background-color: #e50914; /* Hover color for buttons */
+}
+
+.movie-list {
+    display: flex;
+    align-items: center;
+}
+.top-level-wraper
+{
+    display: flex;
+    align-items: center;
+}
+
+.users {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    
+    align-items: center;
+}
+
+.username {
+    font-weight: bold;
+    
+}
+
 
 /* Responsive styling */
 @media (max-width: 768px) {

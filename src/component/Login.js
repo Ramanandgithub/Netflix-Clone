@@ -2,12 +2,17 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import './Login.css'; // Import your CSS file
 import Navbar from "./Navbar";
 import { useState } from "react";
+import { useContext } from "react";
+import Context from "../context/UserContext";
 
 function Login() {
     const [formData, setFormData] = useState({
         username: '',
         password: ''
     });
+    const {user} = useContext(Context);
+
+
 
     const navigate = useNavigate(); // Use useNavigate for navigation
     
@@ -20,22 +25,21 @@ function Login() {
         LoginHandler();
     };
 
-    const changeHandler = (e) => {
-        const { name, value } = e.target; // Destructure target properties
-        setFormData(prevData => ({
-            ...prevData,
-            [name]: value // Update the specific field based on the input name
-        }));
-    };
+    const [value,setvalue] = useState('')
+
+
+    
+
+   
 
     const LoginHandler = () => {
         // Check if username and password are not empty
-        if (formData.username !== '' && formData.password !== '') {
-            // Navigate to the /card route
+        if (user.email === value) {
+            
             navigate('/card');
         } else {
             // If login fails, you can optionally display a message or stay on the login page
-            alert('Please enter both username and password.');
+            alert('Please enter correct username');
             navigate('/login'); // Redirect to login page (this line is optional)
         }
     };
@@ -51,7 +55,7 @@ function Login() {
                         <div className="input-group">
                             <input
                                 name="username"
-                                onChange={changeHandler}
+                                onChange={(e)=>setvalue(e.target.value)}
                                 type="text"
                                 placeholder="Email or Mobile number"
                                 className="login-input"
@@ -61,7 +65,7 @@ function Login() {
                             <input
                                 name="password"
                                 type="password"
-                                onChange={changeHandler}
+                                
                                 placeholder="Password"
                                 className="login-input"
                             />
@@ -80,7 +84,7 @@ function Login() {
                         Forgot Password?
                     </div>
                     <div className="signup-prompt">
-                        New to Netflix? <span><NavLink to="/signup" className="signup-link">Signup Now</NavLink></span>
+                        New to Netflix? <span><NavLink to="/" className="signup-link">Signup Now</NavLink></span>
                     </div>
                     <div className="recaptcha-info">
                         <span>This page is protected by Google reCAPTCHA to ensure you're not a bot. <Link to="/learnmore" className="learn-more-link">Learn more</Link>.</span>

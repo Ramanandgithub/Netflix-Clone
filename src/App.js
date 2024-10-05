@@ -11,6 +11,7 @@ import Player from './pages/Player';
 import UpcomingMovie from './component/UpcomingMovie';
 import PlayUpcomingMovie from './pages/PlayUpcomingMovie';
 import PlayTopRatedMovie from './pages/PlayTopRated';
+import ContextProvider from './context/ContextProvider';
 function App() {
   return (
     // <div className="App">
@@ -18,18 +19,24 @@ function App() {
     //   <Navbar>
     //     <MiddleContent/>
     //   </Navbar>
-      
+
     // </div>
 
-    <Routes>
-      <Route path='/' element={<BestHeader/>}/>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/signup' element={<BestHeader />}/>
-      <Route path='/card' element={<ShowMovieCard />} />
-      <Route path='/player/:id' element={<Player />} />
-      <Route path='/upcoming/:id' element={<PlayUpcomingMovie />} />
-      <Route path='/toprated/:id' element={<PlayTopRatedMovie />} />
-    </Routes>
+    <ContextProvider>
+        <Routes>
+          <Route path='/' element={<BestHeader />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<BestHeader />} />
+          <Route path='/card' element={<ShowMovieCard />} />
+          <Route path='/player/:id' element={<Player />} />
+          <Route path='/upcoming/:id' element={<PlayUpcomingMovie />} />
+          <Route path='/toprated/:id' element={<PlayTopRatedMovie />} />
+        </Routes>
+
+
+    </ContextProvider>
+
+
 
 
   );

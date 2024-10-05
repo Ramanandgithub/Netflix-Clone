@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
 import { useEffect, useState } from "react";
 import './Card.css'; // Ensure to import your CSS file
 import PopularMovie from "./PopularMovie";
